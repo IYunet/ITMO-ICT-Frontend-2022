@@ -11,7 +11,7 @@
     <link rel="../img/favicon.ico">
 
     
-    <title>Задание №5 - Отчеты по Font-end</title>
+    <title>Лабораторная №3 - Отчеты по Font-end</title>
     
 
     <link href="../css/hack.min.css" rel="stylesheet">
@@ -62,7 +62,7 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Лабораторные <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
@@ -79,8 +79,8 @@
 
                         
                             
-<li >
-    <a href="../lr_3/">Лабораторная №3</a>
+<li class="active">
+    <a href="./">Лабораторная №3</a>
 </li>
 
                         
@@ -89,7 +89,7 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Домашние задания <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
@@ -118,8 +118,8 @@
 
                         
                             
-<li class="active">
-    <a href="./">Задание №5</a>
+<li >
+    <a href="../hw_5/">Задание №5</a>
 </li>
 
                         
@@ -137,12 +137,12 @@
                     </li>
 		    <!--
                     <li >
-                        <a rel="prev" href="../hw_4/">
+                        <a rel="prev" href="../lr_2/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li class="disabled">
-                        <a rel="next" >
+                    <li >
+                        <a rel="next" href="../hw_1/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
@@ -157,83 +157,176 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#no-5">Практическая работа № 5</a></li>
-            <li class="second-level"><a href="#1-vue">1. Установка vue</a></li>
+        <li class="first-level active"><a href="#no-3">Лабораторная работа № 3</a></li>
+            <li class="second-level"><a href="#api">Компоненты, представления, роутер и API</a></li>
                 
-            <li class="second-level"><a href="#2">2. Инициализация проекта</a></li>
+            <li class="second-level"><a href="#_1">Страницы: главная, вход и регистрация</a></li>
                 
-            <li class="second-level"><a href="#3">3. Установим зависимости</a></li>
+            <li class="second-level"><a href="#_2">Страницы: номера, бронирования в конкретном номере</a></li>
                 
-            <li class="second-level"><a href="#4">4. Запускаем проект</a></li>
+            <li class="second-level"><a href="#_3">Страницы: работников и постояльцев</a></li>
                 
-            <li class="second-level"><a href="#_1">Вывод</a></li>
+            <li class="second-level"><a href="#_4">Вывод</a></li>
                 
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="no-5">Практическая работа № 5</h1>
-<p><code>Описание:</code> В рамках данной работы Вам предстоит изучить основные команды пакетного менеджера NPM и научиться стартовать проект на Vue.</p>
-<hr>
-
-<h2 id="1-vue">1. Установка vue</h2>
-<blockquote>
-<p><code>&gt;&gt; npm install -g @vue/cli</code></p>
-</blockquote>
-<p><img alt="Screenshot" src="../img/hw_5/install.png" /></p>
-<hr>
-
-<h2 id="2">2. Инициализация проекта</h2>
-<blockquote>
-<p><code>&gt;&gt; npm init vue@latest</code></p>
-</blockquote>
-<p><img alt="Screenshot" src="../img/hw_5/init.png" /></p>
-<hr>
-
-<h2 id="3">3. Установим зависимости</h2>
-<blockquote>
-<p><code>&gt;&gt; cd first_project</code> </p>
-<p><code>&gt;&gt; npm install</code></p>
-</blockquote>
-<p><img alt="Screenshot" src="../img/hw_5/depend.png" /></p>
+<h1 id="no-3">Лабораторная работа № 3</h1>
+<h2> Разработка одностраничного веб-приложения (SPA) с использованием фреймворка Vue.JS </h2>
+<p><code>Описание:</code>
+Мигрировать ранее написанный сайт на фреймворк Vue.JS.</p>
+<p><code>Минимальные требования:</code></p>
 <ul>
-<li>В файле package.json надо сделать следующие изменения в секции scripts:</li>
+<li>Должен быть подключён роутер</li>
+<li>Должна быть реализована работа с внешним API</li>
+<li>Разумное деление на компоненты</li>
 </ul>
-<pre><code class="language-json">{
-  &quot;name&quot;: &quot;first_project&quot;,
-  &quot;version&quot;: &quot;0.0.0&quot;,
-  &quot;private&quot;: true,
-  &quot;scripts&quot;: {
-    &quot;start&quot;: &quot;vite --port 9000&quot;,
-    &quot;dev&quot;: &quot;vite&quot;,
-    &quot;build&quot;: &quot;vite build&quot;,
-    &quot;preview&quot;: &quot;vite preview&quot;,
-    &quot;lint&quot;: &quot;eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore&quot;
-    },
-  &quot;dependencies&quot;: {
-    &quot;pinia&quot;: &quot;^2.0.28&quot;,
-    &quot;vue&quot;: &quot;^3.2.45&quot;,
-    &quot;vue-router&quot;: &quot;^4.1.6&quot;
-  },
-  &quot;devDependencies&quot;: {
-    &quot;@vitejs/plugin-vue&quot;: &quot;^4.0.0&quot;,
-    &quot;eslint&quot;: &quot;^8.22.0&quot;,
-    &quot;eslint-plugin-vue&quot;: &quot;^9.3.0&quot;,
-    &quot;vite&quot;: &quot;^4.0.0&quot;
-  }
-}
+<p><code>Вариант:</code> Взял базу данных отеля, написанную на Django</p>
+<hr>
+
+<h2 id="api">Компоненты, представления, роутер и API</h2>
+<ul>
+<li>clientTable - таблица для отображения клиентов</li>
+<li>CurrentBooks - отображения текщих бронирований</li>
+<li>headOfTableRooms - заголовки таблицы для отображения комнат</li>
+<li>modalForEdit - модальное окно для возможности редактировать объект базы данных</li>
+<li>roomsCard - отоборажние комнат</li>
+<li>workersCard - отображение сотрудников</li>
+</ul>
+<p><img alt="Screenshot" src="../img/lr_3/components.png" /></p>
+<hr>
+
+<ul>
+<li>ClientPage - страница клиентов</li>
+<li>CurrentBooksForRoomPage - страница всех бронирований для выбранной комнаты</li>
+<li>LoginPage - вход</li>
+<li>MainPage - главная страница</li>
+<li>RoomsPage - страница всех комнат</li>
+<li>SingupPage - страница регистрации</li>
+<li>WorkersPage - страница всех работников</li>
+</ul>
+<p><img alt="Screenshot" src="../img/lr_3/views.png" /></p>
+<hr>
+
+<ul>
+<li>src/router/index.js</li>
+</ul>
+<pre><code class="language-javaScript">import { createRouter, createWebHistory } from 'vue-router'
+
+const router = createRouter({
+ history: createWebHistory(import.meta.env.BASE_URL),
+
+ routes: [
+   {
+     path: '/all_workers',
+     name: 'workers',
+     component: () =&gt; import('../views/WorkersPage.vue')
+   },
+     {
+         path: '/login',
+         name: 'login',
+         component: () =&gt; import('../views/LoginPage.vue')
+     },
+     {
+         path: '/singup',
+         name: 'singup',
+         component: () =&gt; import('../views/SingupPage.vue')
+     },
+     {
+         path: '/',
+         name: 'main',
+         component: () =&gt; import('../views/MainPage.vue')
+     },
+     {
+         path: '/rooms',
+         name: 'rooms',
+         component: () =&gt; import('../views/RoomsPage.vue')
+     },
+     {
+         path: '/room_book',
+         name: 'room_book',
+         component: () =&gt; import('../views/CurrentBooksForRoomPage.vue')
+     },
+     {
+         path: '/client',
+         name: 'client',
+         component: () =&gt; import('../views/ClientPage.vue')
+     },
+ ]
+})
+
+// экспортируем сконфигурированный роутер
+export default router
+
 </code></pre>
 <hr>
-
-<h2 id="4">4. Запускаем проект</h2>
-<blockquote>
-<p><code>&gt;&gt; npm start</code></p>
-</blockquote>
-<p><img alt="Screenshot" src="../img/hw_5/start.png" /></p>
+<ul>
+<li>API</li>
+</ul>
+<p><img alt="Screenshot" src="../img/lr_3/api.png" /></p>
 <hr>
 
-<h2 id="_1">Вывод</h2>
-<p>В ходе работы я научился запускать vue проект, с помощью npm</p></div>
+<h2 id="_1">Страницы: главная, вход и регистрация</h2>
+<ul>
+<li>Реализована аутентификация по токенам, на данный момент навагиационная панель отображает лишь часть кнопок, поскольку пользователь не вошел в аккаунт </li>
+</ul>
+<p><img alt="Screenshot" src="../img/lr_3/main_page.png" /></p>
+<p><img alt="Screenshot" src="../img/lr_3/singup.png" /></p>
+<p><img alt="Screenshot" src="../img/lr_3/login.png" /></p>
+<ul>
+<li>Если не залогиненый пользователь захочет перейти по url, к которому у него нет доступа, то он получит это:</li>
+</ul>
+<p><img alt="Screenshot" src="../img/lr_3/reject.png" /></p>
+<ul>
+<li>Теперь войдем в аккаунт и посмотрим главную страницу</li>
+</ul>
+<p><img alt="Screenshot" src="../img/lr_3/main_login.png" /></p>
+<hr>
+
+<h2 id="_2">Страницы: номера, бронирования в конкретном номере</h2>
+<p><img alt="Screenshot" src="../img/lr_3/rooms.png" /></p>
+<ul>
+<li>Сортировка здесь происходит на серверной части: </li>
+</ul>
+<p><img alt="Screenshot" src="../img/lr_3/sort_rooms.png" /></p>
+<ul>
+<li>Теперь нажмем кнопку бронирования, нас перенаправит на /room_book. Если у нас на текущий день свободен номер, то можно будет заселить гостя, который уже есть в базе данных, если номер занят, то будет выведен соотвествующий статус</li>
+</ul>
+<p><img alt="Screenshot" src="../img/lr_3/free_room.png" /></p>
+<ul>
+<li>Если нажать кнопку заселить, то выведется модальное окно</li>
+</ul>
+<p><img alt="Screenshot" src="../img/lr_3/button_in.png" /></p>
+<ul>
+<li>Комната, которая занята:</li>
+</ul>
+<p><img alt="Screenshot" src="../img/lr_3/busy_room.png" /></p>
+<ul>
+<li>Также, по кнопке можно выселить постояльца или заселить, тогда статус комнаты ссотвественно поменяется:</li>
+</ul>
+<p><img alt="Screenshot" src="../img/lr_3/move_out.png" /></p>
+<hr>
+
+<h2 id="_3">Страницы: работников и постояльцев</h2>
+<ul>
+<li>Постояльцы</li>
+</ul>
+<p><img alt="Screenshot" src="../img/lr_3/guests.png" /></p>
+<ul>
+<li>Работники</li>
+</ul>
+<p><img alt="Screenshot" src="../img/lr_3/workers.png" /></p>
+<ul>
+<li>При нажатии кнопок: добавить сотрудника, редактировать и удалить появятся следущие модальные окна, позвольющие выполнить данные действия</li>
+</ul>
+<p><img alt="Screenshot" src="../img/lr_3/add_worker.png" /></p>
+<p><img alt="Screenshot" src="../img/lr_3/edit_worker.png" /></p>
+<p><img alt="Screenshot" src="../img/lr_3/delete_worker.png" /></p>
+<hr>
+
+<h2 id="_4">Вывод</h2>
+<p>В ходе работы был разработан одностраничное веб-приложение с использованием фреймворка Vue.JS и Django (DRF), и библиотекой bootsrtrap</p></div>
         
         
     </div>
